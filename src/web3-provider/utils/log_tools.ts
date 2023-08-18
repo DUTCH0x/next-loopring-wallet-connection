@@ -1,4 +1,3 @@
-/* eslint-disable no-console, @typescript-eslint/ban-ts-comment */
 let _myLog;
 
 if (
