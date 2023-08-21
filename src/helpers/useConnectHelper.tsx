@@ -1,7 +1,7 @@
 import { useEffect, useMemo } from 'react';
 import { provider } from 'web3-core';
 
-import { Commands, ConnectProvides, ErrorType, ProcessingType, walletServices } from '@/web3-provider';
+import { Commands, ConnectProvides, ErrorType, ProcessingType, walletServices } from '@loopring-web/web3-provider';
 import { ChainId } from '@loopring-web/loopring-sdk';
 
 export interface handleProcessingI {

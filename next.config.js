@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+const path = require('path');
 
 const nextConfig = {
   reactStrictMode: true,
@@ -17,6 +18,23 @@ const nextConfig = {
       'static.gstop-content.com',
       'cdn.loopexchange.art',
     ],
+  },
+  webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+    // Modify the Babel loader rules for specific modules
+    config.module.rules.push({
+      test: /\.(js|mjs|jsx|ts|tsx)$/,
+      include: [
+        // Include the paths you want to add to babelLoader rules
+        path.resolve(__dirname, '../../node_modules/@walletconnect'),
+        path.resolve(__dirname, '../../node_modules/@web3modal'),
+        // You can add more paths here if needed
+      ],
+      // Add any other necessary configuration options
+    });
+
+    // You can modify other parts of the webpack configuration here if needed
+
+    return config;
   },
 };
 

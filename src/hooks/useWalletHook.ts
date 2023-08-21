@@ -9,7 +9,7 @@ import {
 } from '@/ducks';
 import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { ConnectorNames } from '@loopring-web/loopring-sdk';
-import { connectProvides, walletServices } from '@/web3-provider';
+import { connectProvides, ConnectProvides, walletServices } from '@loopring-web/web3-provider';
 import { deleteCookie } from 'cookies-next';
 import { shallowEqual } from 'react-redux';
 
@@ -49,6 +49,7 @@ const useWalletHook = () => {
         await connectProvides.GameStop({ darkMode: true });
         break;
       case ConnectorNames.WalletConnect:
+        ConnectProvides.APP_FRAMEWORK = "NEXT_PUBLIC_";
         await connectProvides.WalletConnect({
           account: undefined,
           darkMode: true,
