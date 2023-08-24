@@ -9,7 +9,7 @@ import {
 } from '@/ducks';
 import { useAppDispatch, useAppSelector } from '@/redux/store';
 import { ConnectorNames } from '@loopring-web/loopring-sdk';
-import { connectProvides, ConnectProvides, walletServices } from '@loopring-web/web3-provider';
+import { connectProvides, ConnectProvides, walletServices } from 'web3-provider-test';
 import { deleteCookie } from 'cookies-next';
 import { shallowEqual } from 'react-redux';
 

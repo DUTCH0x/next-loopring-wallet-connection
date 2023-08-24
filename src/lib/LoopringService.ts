@@ -23,7 +23,7 @@ import { getCookie } from 'cookies-next';
 import store from '@/redux/store';
 import assert from 'assert';
 import { ethers } from 'ethers';
-import { connectProvides } from '@loopring-web/web3-provider';
+import { connectProvides } from 'web3-provider-test';
 import { Subject } from 'rxjs';
 
 interface MintNFTI {
